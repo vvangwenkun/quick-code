@@ -1,0 +1,13 @@
+{
+  "name": "quick-code",
+  "version": "1.0.0",
+  "description": "DEMO CODE",
+  "scripts": {
+    "test": "npx jest __tests__"
+  },
+  "author": "aric.vvang@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
