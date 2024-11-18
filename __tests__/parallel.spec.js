@@ -4,11 +4,11 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 describe('parallel', () => {
   test('throws if tasks is not an array', async () => {
-    expect(parallel('tasks')).rejects.toThrow('must be an array');
+    await expect(parallel('tasks')).rejects.toThrow('must be an array');
   });
 
   test('throws if tasks element includes non-function object', async () => {
-    expect(parallel([jest.fn(), 'string'])).rejects.toThrow('"tasks[1]" must be a function object');
+    await expect(parallel([jest.fn(), 'string'])).rejects.toThrow('"tasks[1]" must be a function object');
   });
 
   test('not limit async operations at a time', async () => {
